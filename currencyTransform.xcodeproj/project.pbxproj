@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AF42C86E01CBC575761A8B /* libPods-currencyTransform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D1B634B14E7890C376270F /* libPods-currencyTransform.a */; };
+		A20463AA1CFD26D900F2643B /* DataFromDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A20463A91CFD26D900F2643B /* DataFromDataBase.m */; };
+		A2B29E2E1CF9D1C5001ED66D /* chosenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B29E2D1CF9D1C5001ED66D /* chosenViewController.m */; };
+		A2C9CF711CFE5DF40039D905 /* supportList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2C9CF701CFE5DF40039D905 /* supportList.plist */; };
 		A2DB645D1CF8780100E0757F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB645C1CF8780100E0757F /* main.m */; };
 		A2DB64601CF8780100E0757F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB645F1CF8780100E0757F /* AppDelegate.m */; };
 		A2DB64631CF8780100E0757F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB64621CF8780100E0757F /* ViewController.m */; };
@@ -36,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D6408F56A171B2F4D13DD56 /* Pods-currencyTransform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currencyTransform.release.xcconfig"; path = "Pods/Target Support Files/Pods-currencyTransform/Pods-currencyTransform.release.xcconfig"; sourceTree = "<group>"; };
+		7C6B2F1DF705D5D28045AFB4 /* Pods-currencyTransform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currencyTransform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-currencyTransform/Pods-currencyTransform.debug.xcconfig"; sourceTree = "<group>"; };
+		A20463A81CFD26D900F2643B /* DataFromDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFromDataBase.h; sourceTree = "<group>"; };
+		A20463A91CFD26D900F2643B /* DataFromDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFromDataBase.m; sourceTree = "<group>"; };
+		A2B29E2C1CF9D1C5001ED66D /* chosenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chosenViewController.h; sourceTree = "<group>"; };
+		A2B29E2D1CF9D1C5001ED66D /* chosenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chosenViewController.m; sourceTree = "<group>"; };
+		A2C9CF701CFE5DF40039D905 /* supportList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = supportList.plist; path = ../supportList.plist; sourceTree = "<group>"; };
 		A2DB64581CF8780100E0757F /* currencyTransform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currencyTransform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DB645C1CF8780100E0757F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2DB645E1CF8780100E0757F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 		A2DB647F1CF8780200E0757F /* currencyTransformUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = currencyTransformUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DB64831CF8780200E0757F /* currencyTransformUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = currencyTransformUITests.m; sourceTree = "<group>"; };
 		A2DB64851CF8780200E0757F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D1B634B14E7890C376270F /* libPods-currencyTransform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currencyTransform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AF42C86E01CBC575761A8B /* libPods-currencyTransform.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DBE02602C366C73F77B81D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5D1B634B14E7890C376270F /* libPods-currencyTransform.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2DB644F1CF8780100E0757F = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +108,8 @@
 				A2DB64771CF8780200E0757F /* currencyTransformTests */,
 				A2DB64821CF8780200E0757F /* currencyTransformUITests */,
 				A2DB64591CF8780100E0757F /* Products */,
+				EDE043DCB2B2B5392A47CAF3 /* Pods */,
+				1DBE02602C366C73F77B81D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +130,10 @@
 				A2DB645F1CF8780100E0757F /* AppDelegate.m */,
 				A2DB64611CF8780100E0757F /* ViewController.h */,
 				A2DB64621CF8780100E0757F /* ViewController.m */,
+				A2B29E2C1CF9D1C5001ED66D /* chosenViewController.h */,
+				A2B29E2D1CF9D1C5001ED66D /* chosenViewController.m */,
+				A20463A81CFD26D900F2643B /* DataFromDataBase.h */,
+				A20463A91CFD26D900F2643B /* DataFromDataBase.m */,
 				A2DB64641CF8780100E0757F /* Main.storyboard */,
 				A2DB646A1CF8780100E0757F /* Assets.xcassets */,
 				A2DB646C1CF8780100E0757F /* LaunchScreen.storyboard */,
@@ -120,6 +147,7 @@
 		A2DB645B1CF8780100E0757F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2C9CF701CFE5DF40039D905 /* supportList.plist */,
 				A2DB645C1CF8780100E0757F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +171,15 @@
 			path = currencyTransformUITests;
 			sourceTree = "<group>";
 		};
+		EDE043DCB2B2B5392A47CAF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C6B2F1DF705D5D28045AFB4 /* Pods-currencyTransform.debug.xcconfig */,
+				4D6408F56A171B2F4D13DD56 /* Pods-currencyTransform.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2DB64881CF8780200E0757F /* Build configuration list for PBXNativeTarget "currencyTransform" */;
 			buildPhases = (
+				7FF488C799A9E1542FFEF75D /* 📦 Check Pods Manifest.lock */,
 				A2DB64541CF8780100E0757F /* Sources */,
 				A2DB64551CF8780100E0757F /* Frameworks */,
 				A2DB64561CF8780100E0757F /* Resources */,
+				32BB9D9AF5B3EE8E12994EE7 /* 📦 Embed Pods Frameworks */,
+				9691B9668ACEB1BD75DF650B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C9CF711CFE5DF40039D905 /* supportList.plist in Resources */,
 				A2DB646E1CF8780100E0757F /* LaunchScreen.storyboard in Resources */,
 				A2DB646B1CF8780100E0757F /* Assets.xcassets in Resources */,
 				A2DB64661CF8780100E0757F /* Main.storyboard in Resources */,
@@ -271,15 +312,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32BB9D9AF5B3EE8E12994EE7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-currencyTransform/Pods-currencyTransform-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FF488C799A9E1542FFEF75D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9691B9668ACEB1BD75DF650B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-currencyTransform/Pods-currencyTransform-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2DB64541CF8780100E0757F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20463AA1CFD26D900F2643B /* DataFromDataBase.m in Sources */,
 				A2DB64631CF8780100E0757F /* ViewController.m in Sources */,
 				A2DB64691CF8780100E0757F /* currencyTransform.xcdatamodeld in Sources */,
 				A2DB64601CF8780100E0757F /* AppDelegate.m in Sources */,
 				A2DB645D1CF8780100E0757F /* main.m in Sources */,
+				A2B29E2E1CF9D1C5001ED66D /* chosenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +509,7 @@
 		};
 		A2DB64891CF8780200E0757F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6B2F1DF705D5D28045AFB4 /* Pods-currencyTransform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = currencyTransform/Info.plist;
@@ -429,6 +521,7 @@
 		};
 		A2DB648A1CF8780200E0757F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6408F56A171B2F4D13DD56 /* Pods-currencyTransform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = currencyTransform/Info.plist;
@@ -503,6 +596,7 @@
 				A2DB648A1CF8780200E0757F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DB648B1CF8780200E0757F /* Build configuration list for PBXNativeTarget "currencyTransformTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +605,7 @@
 				A2DB648D1CF8780200E0757F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2DB648E1CF8780200E0757F /* Build configuration list for PBXNativeTarget "currencyTransformUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +614,7 @@
 				A2DB64901CF8780200E0757F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

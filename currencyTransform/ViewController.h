@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "chosenViewController.h"
+
 
 @interface ViewController : UIViewController
+<UIAlertViewDelegate> 
 
-
+@property(strong,nonatomic)chosenViewController *chosenViewController;
 @end
 
