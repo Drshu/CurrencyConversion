@@ -145,11 +145,39 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //NSString *chooseName = self.nameArray[indexPath.row];
     NSLog(@"tag :: %ld",indexPath.row);
     if(indexPath.row != 0){
-        [self performSegueWithIdentifier:@"showDetail" sender:indexPath];
-    }
+                //1.获得数据库文件的路径
+            NSString *doc=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+            NSString *fileName=[doc stringByAppendingPathComponent:@"countryList.sqlite"];
+        
+            //2.获得数据库
+            FMDatabase *db=[FMDatabase databaseWithPath:fileName];
+        
+            //3.打开数据库
+            if ([db open]) {
+                //4.查表
+                BOOL result=[db executeUpdate:@"SELECT name FROM t_countryList where name = (?) ",self.data[indexPath.row]];
+        
+               if (result) {
+                    NSLog(@"查表成功");
+                        [db executeUpdate:@"INSERT INTO t_countryList (name) VALUES (?);",self.data[indexPath.row]];
+                      //把度到的国家名写入主页的表中
+                    
+                }
+                
+            }else
+            {
+                NSLog(@"创表失败");
+            }
+
+        
+        
+            }
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    
+   
     
 }
 

@@ -63,7 +63,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     //3.打开数据库
     if ([db open]) {
         //4.创表
-        BOOL result=[db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_countryList (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL,currencyName text NOT NULL,countryShort text NOT NULL );"];
+        BOOL result=[db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_countryList (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL,currencyName text ,countryShort text );"];
         
         if (result) {
             NSLog(@"创表成功");
