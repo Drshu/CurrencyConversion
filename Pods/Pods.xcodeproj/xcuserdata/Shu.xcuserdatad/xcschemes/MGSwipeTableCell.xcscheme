@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D967D608189DAFA072D9F581034FC52A'
-               BlueprintName = 'Pods-currencyTransform'
+               BlueprintIdentifier = '8C463CD491D989B457394A7AA95384BC'
+               BlueprintName = 'MGSwipeTableCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-currencyTransform.a'>
+               BuildableName = 'libMGSwipeTableCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

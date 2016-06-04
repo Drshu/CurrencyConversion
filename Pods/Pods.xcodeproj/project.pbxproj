@@ -7,25 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */; };
-		897045B478EBC492B4031E4E84C117DE /* Pods-currencyTransform-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5B1122ECFBDFE4F6728B320E3D040 /* Pods-currencyTransform-dummy.m */; };
-		9BE3B3D900BF3C7AFFA8B8A4C0C07307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A561A67BF274ABC8C70A4FFA23D56C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A39A10070072F5A4C72CC384F0114622 /* MGSwipeTableCell.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6311FC6B671BE49CCC4819B045FFDA5 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = A8BC270FF8CD4F7A21DDCF751D980E79 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C5356B5927C13149378176588FE0EB /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2FE34DFC142BCA6CE6FCDD1196A43182 /* JElasticPullToRefreshLoadingViewCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8213ACE020820472CB2870433BA36A53 /* JElasticPullToRefreshLoadingViewCircle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B72DE3F6A223A877E41563B52CFC6D1 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1E4E9E6548A09354BEA83258C207C /* FMDB-dummy.m */; };
+		3EF0DF7F2EDEB19DA4F93B53DC9E4EFE /* JElasticPullToRefreshLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554763504C62524735D1F6135843F2AF /* JElasticPullToRefreshLoadingView.m */; };
+		43F59E50377F13FEBA3F7E0884B72965 /* JElasticPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021EA76609E257CBED3FE12DF58484A /* JElasticPullToRefresh-dummy.m */; };
+		4A069DBAC2FE60B120171A1B20C08486 /* JElasticPullToRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = F7CFCAD8B05395D099BA3F7D3CF1C91D /* JElasticPullToRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58B546456F9896C57A2E6F313028CD57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB3F98673377C8B3EFB0D8A2EA3794 /* MGSwipeButton.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6A2FAEE0D4C8299A6C1179A4C17BFD5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00388674C7A04CC362DB564EC4396105 /* MGSwipeTableCell-dummy.m */; };
+		70ADCD43691187B6BA57077CABF75503 /* JElasticPullToRefreshLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D653443993CDE1B7C966F20C84F8EE8 /* JElasticPullToRefreshLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7870B06D1370E90F68FDF4A35BF20779 /* JElasticPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B223586231AE7434DDF6C96EE1CDA /* JElasticPullToRefreshView.m */; };
+		80AF76B205A338488CEB886DA391B995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F2F634C9EC696F9B9D0604BA856DAE /* MGSwipeButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F5B43742FD26E60C8144B4322ABA3C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB970F4106447CB9366D16E93A11462 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A561A67BF274ABC8C70A4FFA23D56C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		B051837451252D86A7D57B384AD6FCC2 /* UIScrollView+JElasticPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A0CF7317867BE68DB937999D7443C8 /* UIScrollView+JElasticPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C19BEF4F19FFBC499552D60D36C70E6 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B79B1E543A4E64676A2FF21181575AD9 /* JElasticPullToRefreshConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 63F0B2AB376531B043FF60D442F5D93E /* JElasticPullToRefreshConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB13B470C198E27412AB0669A2CE2AA4 /* UIView+JElasticPullToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 246AFADD237C9CA8B12B722C23C9F8B0 /* UIView+JElasticPullToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C21E41BA4CE919E4F567FE840BAADD8B /* JElasticPullToRefreshLoadingViewCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C003E51C2FC6813662453156E6B156 /* JElasticPullToRefreshLoadingViewCircle.m */; };
+		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E99F98439DDCB9940DA95ED45E43D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D546B65C492AAD077EEAC26FDC26BE9A /* MGSwipeTableCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B3C6B54195B4E57A65B1856ECD270F14 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C12553DC13BEFE55B24B44627BD8A3 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB50C495367693CC236CB6F12BDE3C9B /* UIScrollView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC097DD80D185C5DA8EEFA48D5F401 /* UIScrollView+JElasticPullToRefresh.m */; };
+		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A9300F95EB5672611051D2FAA38D7F1F /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 14D4DADF60FFEC1AF4B881B0A64138BE /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2699B7A57DF7628D6CF119F751140E /* Pods-currencyTransform-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD5B1122ECFBDFE4F6728B320E3D040 /* Pods-currencyTransform-dummy.m */; };
+		FF170DE49CC87C1E23C47B8C87649612 /* UIView+JElasticPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FF88348F0FD177F764F5ED394B686 /* UIView+JElasticPullToRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		399AD4CCAC1FD61EB6DACC21F24764D2 /* PBXContainerItemProxy */ = {
+		64ECD2AD996F41197D62F7A48D974BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94C83CF45269AE444E7BE5789F241211;
+			remoteInfo = JElasticPullToRefresh;
+		};
+		CC9C1435CAFBE031ABB70F6C5798576F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C463CD491D989B457394A7AA95384BC;
+			remoteInfo = MGSwipeTableCell;
+		};
+		D4F2D32A38B4B96E7562E2CCB996E6D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -35,39 +69,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00388674C7A04CC362DB564EC4396105 /* MGSwipeTableCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MGSwipeTableCell-dummy.m"; sourceTree = "<group>"; };
+		031FF88348F0FD177F764F5ED394B686 /* UIView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+JElasticPullToRefresh.m"; path = "JElasticPullToRefresh/UIView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
+		0553AAD6647EA0673329F8D3B978AE3C /* MGSwipeTableCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGSwipeTableCell.xcconfig; sourceTree = "<group>"; };
 		06BF66023F66E7BE1038494DE927901C /* Pods-currencyTransform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-currencyTransform.release.xcconfig"; sourceTree = "<group>"; };
 		0ABB0D4ABD6917A4D9A5F82612ED9428 /* Pods-currencyTransform-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-currencyTransform-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		11C003E51C2FC6813662453156E6B156 /* JElasticPullToRefreshLoadingViewCircle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JElasticPullToRefreshLoadingViewCircle.m; path = JElasticPullToRefresh/JElasticPullToRefreshLoadingViewCircle.m; sourceTree = "<group>"; };
+		14D4DADF60FFEC1AF4B881B0A64138BE /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		1B15EA08B0FCFB159A106AC69039779C /* libPods-currencyTransform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currencyTransform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB970F4106447CB9366D16E93A11462 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		20D3649FC5631A6D1D93646BAF4906E6 /* JElasticPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JElasticPullToRefresh.xcconfig; sourceTree = "<group>"; };
+		246AFADD237C9CA8B12B722C23C9F8B0 /* UIView+JElasticPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+JElasticPullToRefresh.h"; path = "JElasticPullToRefresh/UIView+JElasticPullToRefresh.h"; sourceTree = "<group>"; };
 		2A6CE38B3363DE0E84AFDA5358606192 /* Pods-currencyTransform-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-currencyTransform-acknowledgements.plist"; sourceTree = "<group>"; };
-		33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		3A8C73D72453EB68F907D1B6696CF96B /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		37537EA77C89C473E465F598C44E5EDA /* libJElasticPullToRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJElasticPullToRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3983173E9F93EF23FAB8C2895FD2A22D /* JElasticPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JElasticPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		3BDB3F98673377C8B3EFB0D8A2EA3794 /* MGSwipeButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeButton.m; path = MGSwipeTableCell/MGSwipeButton.m; sourceTree = "<group>"; };
+		49A0CF7317867BE68DB937999D7443C8 /* UIScrollView+JElasticPullToRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JElasticPullToRefresh.h"; path = "JElasticPullToRefresh/UIScrollView+JElasticPullToRefresh.h"; sourceTree = "<group>"; };
+		554763504C62524735D1F6135843F2AF /* JElasticPullToRefreshLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JElasticPullToRefreshLoadingView.m; path = JElasticPullToRefresh/JElasticPullToRefreshLoadingView.m; sourceTree = "<group>"; };
+		58F2F634C9EC696F9B9D0604BA856DAE /* MGSwipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeButton.h; path = MGSwipeTableCell/MGSwipeButton.h; sourceTree = "<group>"; };
 		5FD3ACD4A7024C94CAAA1E75240E016C /* Pods-currencyTransform-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-currencyTransform-frameworks.sh"; sourceTree = "<group>"; };
-		638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
-		6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		6021EA76609E257CBED3FE12DF58484A /* JElasticPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JElasticPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		63F0B2AB376531B043FF60D442F5D93E /* JElasticPullToRefreshConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JElasticPullToRefreshConstants.h; path = JElasticPullToRefresh/JElasticPullToRefreshConstants.h; sourceTree = "<group>"; };
+		70C5356B5927C13149378176588FE0EB /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
 		7104BA96919BA3D887954DEBD125D7BB /* Pods-currencyTransform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-currencyTransform.debug.xcconfig"; sourceTree = "<group>"; };
-		71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		7A2A142ECF5354619FCEEB5636E26659 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B72DE3F6A223A877E41563B52CFC6D1 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		7D653443993CDE1B7C966F20C84F8EE8 /* JElasticPullToRefreshLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JElasticPullToRefreshLoadingView.h; path = JElasticPullToRefresh/JElasticPullToRefreshLoadingView.h; sourceTree = "<group>"; };
+		8213ACE020820472CB2870433BA36A53 /* JElasticPullToRefreshLoadingViewCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JElasticPullToRefreshLoadingViewCircle.h; path = JElasticPullToRefresh/JElasticPullToRefreshLoadingViewCircle.h; sourceTree = "<group>"; };
 		8D2156D8E5FC8C7B92A0F422102441FE /* Pods-currencyTransform-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-currencyTransform-resources.sh"; sourceTree = "<group>"; };
-		91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		8D2E99F98439DDCB9940DA95ED45E43D /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1448204AE8E2DC37C8C36438BED7AD8 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
-		C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		C228CC7C12AF97706CB7A83D869AD700 /* libPods-currencyTransform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currencyTransform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		99C07656C9723BF5C203A0BF424BF44F /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		9C19BEF4F19FFBC499552D60D36C70E6 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A2777EF5E4F39D8037109ED44398F464 /* MGSwipeTableCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MGSwipeTableCell-prefix.pch"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A39A10070072F5A4C72CC384F0114622 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MGSwipeTableCell.m; path = MGSwipeTableCell/MGSwipeTableCell.m; sourceTree = "<group>"; };
+		A8BC270FF8CD4F7A21DDCF751D980E79 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		A9300F95EB5672611051D2FAA38D7F1F /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		AFB1E4E9E6548A09354BEA83258C207C /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		B3C6B54195B4E57A65B1856ECD270F14 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B50B223586231AE7434DDF6C96EE1CDA /* JElasticPullToRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JElasticPullToRefreshView.m; path = JElasticPullToRefresh/JElasticPullToRefreshView.m; sourceTree = "<group>"; };
+		C5C12553DC13BEFE55B24B44627BD8A3 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		C6311FC6B671BE49CCC4819B045FFDA5 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		CA1619F32F2EB62CF982BBDFCD6C79E6 /* libMGSwipeTableCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGSwipeTableCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE6572772BC18EC0AD79802FC793AD6C /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		D546B65C492AAD077EEAC26FDC26BE9A /* MGSwipeTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MGSwipeTableCell.h; path = MGSwipeTableCell/MGSwipeTableCell.h; sourceTree = "<group>"; };
+		D7EC097DD80D185C5DA8EEFA48D5F401 /* UIScrollView+JElasticPullToRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+JElasticPullToRefresh.m"; path = "JElasticPullToRefresh/UIScrollView+JElasticPullToRefresh.m"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		EDD5B1122ECFBDFE4F6728B320E3D040 /* Pods-currencyTransform-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-currencyTransform-dummy.m"; sourceTree = "<group>"; };
+		F7CFCAD8B05395D099BA3F7D3CF1C91D /* JElasticPullToRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JElasticPullToRefreshView.h; path = JElasticPullToRefresh/JElasticPullToRefreshView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3CC5F41D120E5C4B17467E59406E088A /* Frameworks */ = {
+		4D5C1DB56D70A6CC73D2165BB0475606 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BE3B3D900BF3C7AFFA8B8A4C0C07307 /* Foundation.framework in Frameworks */,
+				80AF76B205A338488CEB886DA391B995 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,80 +137,155 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A416129FD9357EDAB628A67D6F930151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2FAEE0D4C8299A6C1179A4C17BFD5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C9C47F4FDE9A4EA7A8C70873BA247F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5B43742FD26E60C8144B4322ABA3C5 /* Foundation.framework in Frameworks */,
+				58B546456F9896C57A2E6F313028CD57 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6A65CEB166911CC900621A37BC272B1F /* Support Files */ = {
+		5780F50D0F65B259A58A85B62DF26A02 /* standard */ = {
 			isa = PBXGroup;
 			children = (
-				B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */,
-				6D76813CB39ACC402A9EE3DC12B4E682 /* FMDB-dummy.m */,
-				A1448204AE8E2DC37C8C36438BED7AD8 /* FMDB-prefix.pch */,
+				C5C12553DC13BEFE55B24B44627BD8A3 /* FMDatabase.h */,
+				8D2E99F98439DDCB9940DA95ED45E43D /* FMDatabase.m */,
+				9C19BEF4F19FFBC499552D60D36C70E6 /* FMDatabaseAdditions.h */,
+				1EB970F4106447CB9366D16E93A11462 /* FMDatabaseAdditions.m */,
+				A8BC270FF8CD4F7A21DDCF751D980E79 /* FMDatabasePool.h */,
+				C6311FC6B671BE49CCC4819B045FFDA5 /* FMDatabasePool.m */,
+				B3C6B54195B4E57A65B1856ECD270F14 /* FMDatabaseQueue.h */,
+				70C5356B5927C13149378176588FE0EB /* FMDatabaseQueue.m */,
+				7B72DE3F6A223A877E41563B52CFC6D1 /* FMDB.h */,
+				14D4DADF60FFEC1AF4B881B0A64138BE /* FMResultSet.h */,
+				A9300F95EB5672611051D2FAA38D7F1F /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		59B12D157CA5058A11F48CD1F5B8ADE2 /* JElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				63F0B2AB376531B043FF60D442F5D93E /* JElasticPullToRefreshConstants.h */,
+				7D653443993CDE1B7C966F20C84F8EE8 /* JElasticPullToRefreshLoadingView.h */,
+				554763504C62524735D1F6135843F2AF /* JElasticPullToRefreshLoadingView.m */,
+				8213ACE020820472CB2870433BA36A53 /* JElasticPullToRefreshLoadingViewCircle.h */,
+				11C003E51C2FC6813662453156E6B156 /* JElasticPullToRefreshLoadingViewCircle.m */,
+				F7CFCAD8B05395D099BA3F7D3CF1C91D /* JElasticPullToRefreshView.h */,
+				B50B223586231AE7434DDF6C96EE1CDA /* JElasticPullToRefreshView.m */,
+				49A0CF7317867BE68DB937999D7443C8 /* UIScrollView+JElasticPullToRefresh.h */,
+				D7EC097DD80D185C5DA8EEFA48D5F401 /* UIScrollView+JElasticPullToRefresh.m */,
+				246AFADD237C9CA8B12B722C23C9F8B0 /* UIView+JElasticPullToRefresh.h */,
+				031FF88348F0FD177F764F5ED394B686 /* UIView+JElasticPullToRefresh.m */,
+				6E1FBE0F82C7C28FEC71BA7A71A7982A /* Support Files */,
+			);
+			path = JElasticPullToRefresh;
+			sourceTree = "<group>";
+		};
+		63D78386EA6805299855622EBB26966A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99C07656C9723BF5C203A0BF424BF44F /* FMDB.xcconfig */,
+				AFB1E4E9E6548A09354BEA83258C207C /* FMDB-dummy.m */,
+				CE6572772BC18EC0AD79802FC793AD6C /* FMDB-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		69D592A87FEAB3C9EB7CAFC48DB33D03 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0553AAD6647EA0673329F8D3B978AE3C /* MGSwipeTableCell.xcconfig */,
+				00388674C7A04CC362DB564EC4396105 /* MGSwipeTableCell-dummy.m */,
+				A2777EF5E4F39D8037109ED44398F464 /* MGSwipeTableCell-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MGSwipeTableCell";
+			sourceTree = "<group>";
+		};
+		6B9FBB36882D119178A6B7056112301B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A142ECF5354619FCEEB5636E26659 /* libFMDB.a */,
+				37537EA77C89C473E465F598C44E5EDA /* libJElasticPullToRefresh.a */,
+				CA1619F32F2EB62CF982BBDFCD6C79E6 /* libMGSwipeTableCell.a */,
+				1B15EA08B0FCFB159A106AC69039779C /* libPods-currencyTransform.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E1FBE0F82C7C28FEC71BA7A71A7982A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20D3649FC5631A6D1D93646BAF4906E6 /* JElasticPullToRefresh.xcconfig */,
+				6021EA76609E257CBED3FE12DF58484A /* JElasticPullToRefresh-dummy.m */,
+				3983173E9F93EF23FAB8C2895FD2A22D /* JElasticPullToRefresh-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JElasticPullToRefresh";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BFB8C92E749ED180124155E2270474D2 /* Pods */,
-				9E98BBBE43F53DEE2F24895616A35AD9 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				B27FA0DBAA7CEF90DB7402B882B283E0 /* Pods */,
+				6B9FBB36882D119178A6B7056112301B /* Products */,
 				D9F8ACFE9321A0844C1F5E4A44EFAFCE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9E98BBBE43F53DEE2F24895616A35AD9 /* Products */ = {
+		AB6049732A2BA6CFFB097467D57D53DF /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				3A8C73D72453EB68F907D1B6696CF96B /* libFMDB.a */,
-				C228CC7C12AF97706CB7A83D869AD700 /* libPods-currencyTransform.a */,
+				5780F50D0F65B259A58A85B62DF26A02 /* standard */,
+				63D78386EA6805299855622EBB26966A /* Support Files */,
 			);
-			name = Products;
+			path = FMDB;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		B27FA0DBAA7CEF90DB7402B882B283E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BFB8C92E749ED180124155E2270474D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DEA37EDFE575D4B41E183255F5C2B8C8 /* FMDB */,
+				AB6049732A2BA6CFFB097467D57D53DF /* FMDB */,
+				59B12D157CA5058A11F48CD1F5B8ADE2 /* JElasticPullToRefresh */,
+				C97ED7C03ACA4AB563DB8EE0944E3E4C /* MGSwipeTableCell */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C89A6930D6DE6039F840782BFE7A2DFB /* standard */ = {
+		C97ED7C03ACA4AB563DB8EE0944E3E4C /* MGSwipeTableCell */ = {
 			isa = PBXGroup;
 			children = (
-				638E465E4B27490B0FB423614C3ADD11 /* FMDatabase.h */,
-				DC7C30F9E55829B027C4913D1F19D68C /* FMDatabase.m */,
-				D2DD52CB174E1DC79111C38E770F6FC8 /* FMDatabaseAdditions.h */,
-				3BCC0EED53ED8D7C1931178E0E4269B4 /* FMDatabaseAdditions.m */,
-				1AF3AEDDA16DD8E28B59FF0788FDDC03 /* FMDatabasePool.h */,
-				400AFB42920EB39709666D3F1A73D6C2 /* FMDatabasePool.m */,
-				33F15B71183AD666DFC49D907F769ACF /* FMDatabaseQueue.h */,
-				C11A8F38580C7A7FF38ACB6A3B412884 /* FMDatabaseQueue.m */,
-				91893D40185E0EFA40FC217BE44A7C0D /* FMDB.h */,
-				69CC8B63F837EA7B053AB8BA07253A25 /* FMResultSet.h */,
-				71B69D4A7150AC2F65A57B7D04F092D4 /* FMResultSet.m */,
+				58F2F634C9EC696F9B9D0604BA856DAE /* MGSwipeButton.h */,
+				3BDB3F98673377C8B3EFB0D8A2EA3794 /* MGSwipeButton.m */,
+				D546B65C492AAD077EEAC26FDC26BE9A /* MGSwipeTableCell.h */,
+				A39A10070072F5A4C72CC384F0114622 /* MGSwipeTableCell.m */,
+				69D592A87FEAB3C9EB7CAFC48DB33D03 /* Support Files */,
 			);
-			name = standard;
+			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 		D9F8ACFE9321A0844C1F5E4A44EFAFCE /* Targets Support Files */ = {
@@ -161,15 +294,6 @@
 				E9FF2CDEBDE3A3F5C40D89A5B1753EF4 /* Pods-currencyTransform */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DEA37EDFE575D4B41E183255F5C2B8C8 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				C89A6930D6DE6039F840782BFE7A2DFB /* standard */,
-				6A65CEB166911CC900621A37BC272B1F /* Support Files */,
-			);
-			path = FMDB;
 			sourceTree = "<group>";
 		};
 		E9FF2CDEBDE3A3F5C40D89A5B1753EF4 /* Pods-currencyTransform */ = {
@@ -187,9 +311,40 @@
 			path = "Target Support Files/Pods-currencyTransform";
 			sourceTree = "<group>";
 		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2EB42C21941D3A78930C67EDF992448C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B79B1E543A4E64676A2FF21181575AD9 /* JElasticPullToRefreshConstants.h in Headers */,
+				70ADCD43691187B6BA57077CABF75503 /* JElasticPullToRefreshLoadingView.h in Headers */,
+				2FE34DFC142BCA6CE6FCDD1196A43182 /* JElasticPullToRefreshLoadingViewCircle.h in Headers */,
+				4A069DBAC2FE60B120171A1B20C08486 /* JElasticPullToRefreshView.h in Headers */,
+				B051837451252D86A7D57B384AD6FCC2 /* UIScrollView+JElasticPullToRefresh.h in Headers */,
+				BB13B470C198E27412AB0669A2CE2AA4 /* UIView+JElasticPullToRefresh.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C640E956052BC19BEA53F680E98AFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C591574031C5736D5717DAE572FC359 /* MGSwipeButton.h in Headers */,
+				CFE557E5D4945FFFC747CA9C6F07B74D /* MGSwipeTableCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B2D82357BE4C2A10AB2CD4724B8E654 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +361,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */;
+			buildPhases = (
+				A9B53C8F39C5CDA29C9F3248145DA578 /* Sources */,
+				A416129FD9357EDAB628A67D6F930151 /* Frameworks */,
+				42C640E956052BC19BEA53F680E98AFA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MGSwipeTableCell;
+			productName = MGSwipeTableCell;
+			productReference = CA1619F32F2EB62CF982BBDFCD6C79E6 /* libMGSwipeTableCell.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		94C83CF45269AE444E7BE5789F241211 /* JElasticPullToRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25D0E5E6E8428F5673721B09A63F16DA /* Build configuration list for PBXNativeTarget "JElasticPullToRefresh" */;
+			buildPhases = (
+				CF66EDA85718143A27720052BE6329AA /* Sources */,
+				C0C9C47F4FDE9A4EA7A8C70873BA247F /* Frameworks */,
+				2EB42C21941D3A78930C67EDF992448C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JElasticPullToRefresh;
+			productName = JElasticPullToRefresh;
+			productReference = 37537EA77C89C473E465F598C44E5EDA /* libJElasticPullToRefresh.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC899FD215914230EB9D8B57AD910D0 /* Build configuration list for PBXNativeTarget "FMDB" */;
@@ -220,24 +409,26 @@
 			);
 			name = FMDB;
 			productName = FMDB;
-			productReference = 3A8C73D72453EB68F907D1B6696CF96B /* libFMDB.a */;
+			productReference = 7A2A142ECF5354619FCEEB5636E26659 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EAA93D2C51D23EEFE23F6291934D2820 /* Pods-currencyTransform */ = {
+		D967D608189DAFA072D9F581034FC52A /* Pods-currencyTransform */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2158528C4D2B4E79686C0F726AD8A047 /* Build configuration list for PBXNativeTarget "Pods-currencyTransform" */;
+			buildConfigurationList = 28A57AAC3C1C6869D1476C802237B120 /* Build configuration list for PBXNativeTarget "Pods-currencyTransform" */;
 			buildPhases = (
-				63C32A18D89362689CBA28A37A5D404F /* Sources */,
-				3CC5F41D120E5C4B17467E59406E088A /* Frameworks */,
+				9511D7064D36CA6D6318CDCA385E16ED /* Sources */,
+				4D5C1DB56D70A6CC73D2165BB0475606 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				193EB7CA3DB0C004FE1EAF1A981F43C5 /* PBXTargetDependency */,
+				F651BAC0A70381AF884FC370B8C2E351 /* PBXTargetDependency */,
+				0267822BBA23952FDB8AE88C5CD7A454 /* PBXTargetDependency */,
+				1B4BD2E5F1CA7B989A81892204FC8444 /* PBXTargetDependency */,
 			);
 			name = "Pods-currencyTransform";
 			productName = "Pods-currencyTransform";
-			productReference = C228CC7C12AF97706CB7A83D869AD700 /* libPods-currencyTransform.a */;
+			productReference = 1B15EA08B0FCFB159A106AC69039779C /* libPods-currencyTransform.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -257,12 +448,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9E98BBBE43F53DEE2F24895616A35AD9 /* Products */;
+			productRefGroup = 6B9FBB36882D119178A6B7056112301B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */,
-				EAA93D2C51D23EEFE23F6291934D2820 /* Pods-currencyTransform */,
+				94C83CF45269AE444E7BE5789F241211 /* JElasticPullToRefresh */,
+				8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */,
+				D967D608189DAFA072D9F581034FC52A /* Pods-currencyTransform */,
 			);
 		};
 /* End PBXProject section */
@@ -281,29 +474,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63C32A18D89362689CBA28A37A5D404F /* Sources */ = {
+		9511D7064D36CA6D6318CDCA385E16ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				897045B478EBC492B4031E4E84C117DE /* Pods-currencyTransform-dummy.m in Sources */,
+				FB2699B7A57DF7628D6CF119F751140E /* Pods-currencyTransform-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B53C8F39C5CDA29C9F3248145DA578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627C702143DC5871810C774521DF7D6D /* MGSwipeButton.m in Sources */,
+				6C6F002C4ACEDC5BF1FCCEAE4E47A48D /* MGSwipeTableCell-dummy.m in Sources */,
+				0965F532B1D323B1DD073186EB650607 /* MGSwipeTableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF66EDA85718143A27720052BE6329AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F59E50377F13FEBA3F7E0884B72965 /* JElasticPullToRefresh-dummy.m in Sources */,
+				3EF0DF7F2EDEB19DA4F93B53DC9E4EFE /* JElasticPullToRefreshLoadingView.m in Sources */,
+				C21E41BA4CE919E4F567FE840BAADD8B /* JElasticPullToRefreshLoadingViewCircle.m in Sources */,
+				7870B06D1370E90F68FDF4A35BF20779 /* JElasticPullToRefreshView.m in Sources */,
+				DB50C495367693CC236CB6F12BDE3C9B /* UIScrollView+JElasticPullToRefresh.m in Sources */,
+				FF170DE49CC87C1E23C47B8C87649612 /* UIView+JElasticPullToRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		193EB7CA3DB0C004FE1EAF1A981F43C5 /* PBXTargetDependency */ = {
+		0267822BBA23952FDB8AE88C5CD7A454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JElasticPullToRefresh;
+			target = 94C83CF45269AE444E7BE5789F241211 /* JElasticPullToRefresh */;
+			targetProxy = 64ECD2AD996F41197D62F7A48D974BB2 /* PBXContainerItemProxy */;
+		};
+		1B4BD2E5F1CA7B989A81892204FC8444 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MGSwipeTableCell;
+			target = 8C463CD491D989B457394A7AA95384BC /* MGSwipeTableCell */;
+			targetProxy = CC9C1435CAFBE031ABB70F6C5798576F /* PBXContainerItemProxy */;
+		};
+		F651BAC0A70381AF884FC370B8C2E351 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FMDB;
 			target = 9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */;
-			targetProxy = 399AD4CCAC1FD61EB6DACC21F24764D2 /* PBXContainerItemProxy */;
+			targetProxy = D4F2D32A38B4B96E7562E2CCB996E6D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0BC8ACAA1BBCD83153EF57E2B89FB594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */;
+			baseConfigurationReference = 99C07656C9723BF5C203A0BF424BF44F /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -321,6 +549,48 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		2CCCD9EA418B84D15DC8053E605A0E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0553AAD6647EA0673329F8D3B978AE3C /* MGSwipeTableCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		388A9105DD216CF5D811BDB7F77D027F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D3649FC5631A6D1D93646BAF4906E6 /* JElasticPullToRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JElasticPullToRefresh/JElasticPullToRefresh-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		3FA2475660FFC880302AD18E29B2E5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -364,28 +634,7 @@
 			};
 			name = Debug;
 		};
-		62662DCB893A5A5023C68EC56E8F020F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06BF66023F66E7BE1038494DE927901C /* Pods-currencyTransform.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		7838F428AF72AC866EED57AAD6A446B1 /* Debug */ = {
+		65F1E0148544F86A3AD566AD1D7C0CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7104BA96919BA3D887954DEBD125D7BB /* Pods-currencyTransform.debug.xcconfig */;
 			buildSettings = {
@@ -406,9 +655,72 @@
 			};
 			name = Debug;
 		};
+		6951E244D447E55F9B56E15DE3362171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D3649FC5631A6D1D93646BAF4906E6 /* JElasticPullToRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JElasticPullToRefresh/JElasticPullToRefresh-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		872BD781C6558154CCE527F649DE1506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BF66023F66E7BE1038494DE927901C /* Pods-currencyTransform.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A07301CCA7DF806E7A1418B350B0C8C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0553AAD6647EA0673329F8D3B978AE3C /* MGSwipeTableCell.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MGSwipeTableCell/MGSwipeTableCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		C7BA904A87CCDF175A63DBF60D6810A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2AC8D08AB9E95E701EC049C53414AEB /* FMDB.xcconfig */;
+			baseConfigurationReference = 99C07656C9723BF5C203A0BF424BF44F /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -468,11 +780,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2158528C4D2B4E79686C0F726AD8A047 /* Build configuration list for PBXNativeTarget "Pods-currencyTransform" */ = {
+		25D0E5E6E8428F5673721B09A63F16DA /* Build configuration list for PBXNativeTarget "JElasticPullToRefresh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7838F428AF72AC866EED57AAD6A446B1 /* Debug */,
-				62662DCB893A5A5023C68EC56E8F020F /* Release */,
+				6951E244D447E55F9B56E15DE3362171 /* Debug */,
+				388A9105DD216CF5D811BDB7F77D027F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28A57AAC3C1C6869D1476C802237B120 /* Build configuration list for PBXNativeTarget "Pods-currencyTransform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65F1E0148544F86A3AD566AD1D7C0CC5 /* Debug */,
+				872BD781C6558154CCE527F649DE1506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -491,6 +812,15 @@
 			buildConfigurations = (
 				0BC8ACAA1BBCD83153EF57E2B89FB594 /* Debug */,
 				C7BA904A87CCDF175A63DBF60D6810A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A8B27F02A10D0E2B6D204B097EF2104 /* Build configuration list for PBXNativeTarget "MGSwipeTableCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A07301CCA7DF806E7A1418B350B0C8C3 /* Debug */,
+				2CCCD9EA418B84D15DC8053E605A0E85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

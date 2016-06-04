@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MGSwipeTableCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-currencyTransform.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8C463CD491D989B457394A7AA95384BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94C83CF45269AE444E7BE5789F241211</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EAA93D2C51D23EEFE23F6291934D2820</key>
+		<key>D967D608189DAFA072D9F581034FC52A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

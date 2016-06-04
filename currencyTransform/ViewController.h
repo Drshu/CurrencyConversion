@@ -11,7 +11,7 @@
 
 
 @interface ViewController : UIViewController
-<UIAlertViewDelegate> 
+<UIAlertViewDelegate>
 
 @property(strong,nonatomic)chosenViewController *chosenViewController;
 @end

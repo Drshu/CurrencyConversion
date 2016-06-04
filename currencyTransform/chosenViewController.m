@@ -9,6 +9,7 @@
 #import "chosenViewController.h"
 #import <FMDB.h>
 
+
 static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
 @interface chosenViewController ()
@@ -24,6 +25,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -162,7 +164,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
                if (result) {
                     NSLog(@"查表成功");
                         [db executeUpdate:@"INSERT INTO t_countryList (name) VALUES (?);",self.data[indexPath.row]];
-                      //把度到的国家名写入主页的表中
+                      //把读到的国家名写入主页的表中
                     
                 }
                 
@@ -185,6 +187,8 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
+
+
 
 
 @end

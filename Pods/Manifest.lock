@@ -2,13 +2,19 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - JElasticPullToRefresh (1.0.3)
+  - MGSwipeTableCell (1.5.5)
 
 DEPENDENCIES:
   - FMDB
+  - JElasticPullToRefresh
+  - MGSwipeTableCell
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  JElasticPullToRefresh: 63b15bfbb96ea476dce3df9460509d59473b1e94
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
 
-PODFILE CHECKSUM: 1684ac663a4c07bdde26d68a60085f4c4720fc83
+PODFILE CHECKSUM: 9abbc20a2ec85cf3353ed97de1916e8d06d9d16e
 
 COCOAPODS: 1.0.0

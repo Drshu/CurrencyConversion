@@ -10,14 +10,11 @@
 #import <FMDB.h>
 #import "chosenViewController.h"
 #import "DataFromDataBase.h"
+#import "UIScrollView+JElasticPullToRefresh.h"
+#import <MGSwipeTableCell.h>
+
 
 static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
-
-
-
-
-
-
 @interface ViewController ()
 
 @property(nonatomic,strong)FMDatabase *db;
@@ -42,6 +39,21 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     UIEdgeInsets contentInset = tableView.contentInset;
     contentInset.top = 20;//调整表视图顶部边缘值
     [tableView setContentInset:contentInset];
+    
+    JElasticPullToRefreshLoadingViewCircle *loadingViewCircle = [[JElasticPullToRefreshLoadingViewCircle alloc] init];
+    loadingViewCircle.tintColor = [UIColor whiteColor];
+    
+    __weak __typeof(self)weakSelf = self;
+    [self.tableView addJElasticPullToRefreshViewWithActionHandler:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.tableView stopLoading];
+            
+        });
+    } LoadingView:loadingViewCircle];
+    [self.tableView setJElasticPullToRefreshFillColor:[UIColor colorWithRed:0.0431 green:0.7569 blue:0.9412 alpha:1.0]];
+    [self.tableView setJElasticPullToRefreshBackgroundColor:self.tableView.backgroundColor];
+
+
 
 
 }
@@ -167,4 +179,21 @@ canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
 
+
+- (NSArray *)btnLeftCount:(int)count
+{
+    NSMutableArray *result = [NSMutableArray array];
+    UIColor *colors[3] = {[UIColor greenColor],
+        [UIColor colorWithRed:0 green:0x99/255.0 blue:0xcc/255.0 alpha:1.0],
+        [UIColor colorWithRed:0.59 green:0.29 blue:0.08 alpha:1.0]};;
+    for (int i = 0; i < count; i ++) {
+        // 按钮提供了几个方法, 可以点进去看一看
+        MGSwipeButton *btn = [MGSwipeButton buttonWithTitle:@"" backgroundColor:colors[i] padding:15 callback:^BOOL(MGSwipeTableCell *sender) {
+            return YES;
+        }];
+        // 把按钮加到数组中
+        [result addObject:btn];
+    }
+    return result;
+}
 @end

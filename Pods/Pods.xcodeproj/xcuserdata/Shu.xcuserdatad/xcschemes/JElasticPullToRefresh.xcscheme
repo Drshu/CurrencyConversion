@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D967D608189DAFA072D9F581034FC52A'
-               BlueprintName = 'Pods-currencyTransform'
+               BlueprintIdentifier = '94C83CF45269AE444E7BE5789F241211'
+               BlueprintName = 'JElasticPullToRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-currencyTransform.a'>
+               BuildableName = 'libJElasticPullToRefresh.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
