@@ -19,6 +19,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
 @property(nonatomic,strong)FMDatabase *db;
 @property (nonatomic, strong) NSMutableArray *nameArray;
+@property(nonatomic,strong)NSMutableArray *shortName;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
@@ -91,17 +92,16 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     //3.打开数据库
     if ([db open]) {
         //4.创表
-        BOOL result=[db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_countryList (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL,currencyName text ,countryShort text );"];
+        BOOL result=[db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_countryList (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL,countryShort text);"];
         
         if (result) {
             NSLog(@"创表成功");
             FMResultSet *resultSet = [db executeQuery:@"SELECT * FROM t_countryList"];
             
             if([resultSet next] == NO){
-                NSString *defaultName = @"CNY";
-                NSString *defaultCurrencyName = @"CN";
-                NSString *defaultCountryShort = @"Y";
-                [db executeUpdate:@"INSERT INTO t_countryList (name,currencyName,countryShort) VALUES (?,?,?);",defaultName,defaultCurrencyName,defaultCountryShort];
+                NSString *defaultName = @"China";
+                NSString *defaultCountryShort = @"CNY";
+                [db executeUpdate:@"INSERT INTO t_countryList (name,countryShort) VALUES (?,?);",defaultName,defaultCountryShort];
                 
             }
         }
@@ -121,20 +121,22 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
 -(void)query{
     self.nameArray = [[NSMutableArray alloc]init];
-    
+    self.shortName = [[NSMutableArray alloc]init];
     // 1.执行查询语句
     FMResultSet *resultSet = [self.db executeQuery:@"SELECT * FROM t_countryList"];
     // 2.遍历结果
     while ([resultSet next]) {
         int ID = [resultSet intForColumn:@"id"];
         NSString *name = [resultSet stringForColumn:@"name"];
-        NSString *currencyName = [resultSet stringForColumn:@"currencyName"];
         NSString *countryShort = [resultSet stringForColumn:@"countryShort"];
-        NSLog(@"%d %@ %@ %@", ID, name, currencyName,countryShort);
+        NSLog(@"%d %@ %@", ID, name,countryShort);
+        
         [self.nameArray addObject:name];
+        [self.shortName addObject:countryShort];
     }
     [[DataFromDataBase shareFromDataBase].nameArrayFromClass arrayByAddingObjectsFromArray:self.nameArray];
     NSLog(@"self.nameArray == %@",self.nameArray);
+    NSLog(@"self.shortName == %@",self.shortName);
 
 }
 
@@ -165,12 +167,13 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     
     if (cell == nil) {
         cell = [[MGSwipeTableCell alloc]
-                initWithStyle:UITableViewCellStyleDefault
+                initWithStyle:UITableViewCellStyleSubtitle
                 reuseIdentifier:SectionsTableIdentifier];
     }
     NSLog(@"self.nameArray == %@",self.nameArray);
     
     cell.textLabel.text =self.nameArray[indexPath.row];
+    cell.detailTextLabel.text = self.shortName[indexPath.row];
     cell.delegate = self;
     cell.allowsMultipleSwipe = NO;
      cell.rightExpansion.fillOnTrigger = YES;

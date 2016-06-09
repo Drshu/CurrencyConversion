@@ -14,6 +14,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
 @interface chosenViewController ()
 @property (nonatomic, strong) NSMutableArray *nameArray;
+@property(nonatomic,strong)NSMutableArray *shortNameArray;
 @property(nonatomic,strong)NSDictionary *data;
 @property(nonatomic,strong)FMDatabase *db;
 @property (weak, nonatomic) IBOutlet UITableView *chosentableView;
@@ -67,17 +68,24 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     
 
     NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"supportList" ofType:@"plist"];
-    NSDictionary *data =[[NSDictionary alloc]initWithContentsOfFile:plistPath];
+    NSDictionary *data =[[NSDictionary alloc]initWithContentsOfFile:plistPath];//把plist文件转换成字典
     NSLog(@"data count:%lu",(unsigned long)data.count);
     NSLog(@"data:%@",data);
     self.data = data;
+    
     NSMutableArray *nameArray = [[NSMutableArray alloc]init];
-    NSEnumerator *myEnumerator = [data keyEnumerator];
+    NSMutableArray *shortNameArray = [[NSMutableArray alloc]init];
+    NSEnumerator *myEnumerator = [data keyEnumerator];//获取所有的key
+    NSEnumerator *myShortEnumerator = [data objectEnumerator];
     for(NSObject *name in myEnumerator){
-        [nameArray addObject:name];
+        [nameArray addObject:name];//把所有key放到数组中
+    }
+    for(NSObject *shortName in myShortEnumerator){
+        [shortNameArray addObject:shortName];//把所有vaule放入数组
     }
     
     self.nameArray = nameArray;
+    self.shortNameArray = shortNameArray;
     NSString *jsonString = [[NSString alloc] initWithData:_jsonData
                             
                                                  encoding:NSUTF8StringEncoding];
@@ -137,12 +145,13 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]
-                initWithStyle:UITableViewCellStyleDefault
+                initWithStyle:UITableViewCellStyleSubtitle
                 reuseIdentifier:SectionsTableIdentifier];
     }
     NSLog(@"self.data == %@",self.data);
     
     cell.textLabel.text =self.nameArray[indexPath.row];
+    cell.detailTextLabel.text = self.shortNameArray[indexPath.row];
     return cell;
 }
 -(NSIndexPath *)chosentableView:(UITableView *)chosentableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -170,7 +179,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
         
                if (result) {
                     NSLog(@"查表成功");
-                        [db executeUpdate:@"INSERT INTO t_countryList (name) VALUES (?);",self.nameArray[indexPath.row]];
+                        [db executeUpdate:@"INSERT INTO t_countryList (name,countryShort) VALUES (?,?);",self.nameArray[indexPath.row],self.shortNameArray[indexPath.row]];
                       //把读到的国家名写入主页的表中
                     
                 }
