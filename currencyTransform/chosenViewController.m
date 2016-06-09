@@ -14,7 +14,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 
 @interface chosenViewController ()
 @property (nonatomic, strong) NSMutableArray *nameArray;
-@property(nonatomic,strong)NSMutableArray *data;
+@property(nonatomic,strong)NSDictionary *data;
 @property(nonatomic,strong)FMDatabase *db;
 @property (weak, nonatomic) IBOutlet UITableView *chosentableView;
 @property(nonatomic,strong) NSData *jsonData;
@@ -67,10 +67,17 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     
 
     NSString *plistPath = [[NSBundle mainBundle]pathForResource:@"supportList" ofType:@"plist"];
-    NSMutableArray *data =[[NSMutableArray alloc]initWithContentsOfFile:plistPath];
+    NSDictionary *data =[[NSDictionary alloc]initWithContentsOfFile:plistPath];
     NSLog(@"data count:%lu",(unsigned long)data.count);
     NSLog(@"data:%@",data);
     self.data = data;
+    NSMutableArray *nameArray = [[NSMutableArray alloc]init];
+    NSEnumerator *myEnumerator = [data keyEnumerator];
+    for(NSObject *name in myEnumerator){
+        [nameArray addObject:name];
+    }
+    
+    self.nameArray = nameArray;
     NSString *jsonString = [[NSString alloc] initWithData:_jsonData
                             
                                                  encoding:NSUTF8StringEncoding];
@@ -135,7 +142,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     }
     NSLog(@"self.data == %@",self.data);
     
-    cell.textLabel.text =self.data[indexPath.row];
+    cell.textLabel.text =self.nameArray[indexPath.row];
     return cell;
 }
 -(NSIndexPath *)chosentableView:(UITableView *)chosentableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,11 +166,11 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
             //3.打开数据库
             if ([db open]) {
                 //4.查表
-                BOOL result=[db executeUpdate:@"SELECT name FROM t_countryList where name = (?) ",self.data[indexPath.row]];
+                BOOL result=[db executeUpdate:@"SELECT name FROM t_countryList where name = (?) ",self.nameArray[indexPath.row]];
         
                if (result) {
                     NSLog(@"查表成功");
-                        [db executeUpdate:@"INSERT INTO t_countryList (name) VALUES (?);",self.data[indexPath.row]];
+                        [db executeUpdate:@"INSERT INTO t_countryList (name) VALUES (?);",self.nameArray[indexPath.row]];
                       //把读到的国家名写入主页的表中
                     
                 }
