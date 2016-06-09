@@ -47,7 +47,23 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     [self.tableView addJElasticPullToRefreshViewWithActionHandler:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.tableView stopLoading];
-            
+            //第一步，创建URL
+            NSURL *url = [NSURL URLWithString:@"http://www.blublu.top/api/v1/allcurrencies"];
+            //第二步，创建请求
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+
+            [request setHTTPMethod:@"GET"];//设置请求方式为POST，默认为GET
+            NSString *str =[NSString stringWithFormat:@""];//设置参数
+            NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+            [request setHTTPBody:data];
+            //第三步，连接服务器
+            NSError *error;
+            NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+            NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+
+            NSDictionary *currencyDic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableContainers error:&error];
+                        NSLog(@"%@",str1);
+            //NSDictionary *country
         });
     } LoadingView:loadingViewCircle];
     [self.tableView setJElasticPullToRefreshFillColor:[UIColor colorWithRed:0.0431 green:0.7569 blue:0.9412 alpha:1.0]];
@@ -82,7 +98,7 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
             FMResultSet *resultSet = [db executeQuery:@"SELECT * FROM t_countryList"];
             
             if([resultSet next] == NO){
-                NSString *defaultName = @"China";
+                NSString *defaultName = @"CNY";
                 NSString *defaultCurrencyName = @"CN";
                 NSString *defaultCountryShort = @"Y";
                 [db executeUpdate:@"INSERT INTO t_countryList (name,currencyName,countryShort) VALUES (?,?,?);",defaultName,defaultCurrencyName,defaultCountryShort];
@@ -145,18 +161,31 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionsTableIdentifier];
+    MGSwipeTableCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionsTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]
+        cell = [[MGSwipeTableCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:SectionsTableIdentifier];
     }
     NSLog(@"self.nameArray == %@",self.nameArray);
     
     cell.textLabel.text =self.nameArray[indexPath.row];
+    cell.delegate = self;
+    cell.allowsMultipleSwipe = NO;
+     cell.rightExpansion.fillOnTrigger = YES;
+    //configure left buttons
+    cell.leftButtons = @[[MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"fav.png"] backgroundColor:[UIColor greenColor]]];
+    cell.leftSwipeSettings.transition = MGSwipeTransition3D;
+    
+    
+    //configure right buttons
+    cell.rightButtons = @[[MGSwipeButton buttonWithTitle:@"删除" backgroundColor:[UIColor redColor]]];
+    cell.rightSwipeSettings.transition = MGSwipeTransition3D;
     return cell;
 }
+
+
 //-(NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    if (indexPath.row==0) {
 //        return nil;//第一行的时候返回nil
@@ -168,18 +197,43 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSString *chooseName = self.nameArray[indexPath.row];
     NSLog(@"tag :: %ld",indexPath.row);
-    if(indexPath.row != 0){
         [self performSegueWithIdentifier:@"showDetail" sender:indexPath];
-    }
-    
 }
+
+
 
 -(BOOL)tableView:(UITableView*)tableView
 canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 60;
+//}
 
+
+-(BOOL) swipeTableCell:(MGSwipeTableCell*) cell tappedButtonAtIndex:(NSInteger) index direction:(MGSwipeDirection)direction fromExpansion:(BOOL) fromExpansion
+{
+    NSLog(@"Delegate: button tapped, %@ position, index %d, from Expansion: %@",
+          direction == MGSwipeDirectionLeftToRight ? @"left" : @"right", (int)index, fromExpansion ? @"YES" : @"NO");
+    
+    if (direction == MGSwipeDirectionRightToLeft && index == 0) {
+        //delete button
+        NSIndexPath * path = [_tableView indexPathForCell:cell];
+        [self.db executeUpdate:@"delete from t_countryList where name = (?) ;",_nameArray[path.row]];
+
+        [_nameArray removeObjectAtIndex:path.row];
+        [_tableView deleteRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationLeft];
+               return NO; //Don't autohide to improve delete expansion animation
+    }
+    
+    return YES;
+}
+
+
+#pragma -
+#pragma head reload
 - (NSArray *)btnLeftCount:(int)count
 {
     NSMutableArray *result = [NSMutableArray array];

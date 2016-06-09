@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "chosenViewController.h"
+#import <MGSwipeTableCell.h>
 
 
-@interface ViewController : UIViewController
-<UIAlertViewDelegate>
+@interface ViewController : UIViewController<UIAlertViewDelegate,UITableViewDataSource, UITableViewDelegate,MGSwipeTableCellDelegate>
 
 @property(strong,nonatomic)chosenViewController *chosenViewController;
 @end

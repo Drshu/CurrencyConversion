@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="370" y="616"/>
         </scene>
-        <!--View Controller-->
+        <!--Transform View Controller-->
         <scene sceneID="6lP-Xt-5d8">
             <objects>
-                <viewController id="WBi-du-eSg" sceneMemberID="viewController">
+                <viewController id="WBi-du-eSg" customClass="transformViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hdb-Xl-JNi"/>
                         <viewControllerLayoutGuide type="bottom" id="Uoe-6x-y1z"/>
@@ -79,8 +79,67 @@
                     <view key="view" contentMode="scaleToFill" id="L6T-yS-6QW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-Bk-goj">
+                                <rect key="frame" x="0.0" y="101" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WBi-du-eSg" id="ove-yx-c59"/>
+                                    <outlet property="delegate" destination="WBi-du-eSg" id="RbY-bK-01Q"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择目标货币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbE-Bp-BMp">
+                                <rect key="frame" x="241" y="72" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRZ-8c-k9K">
+                                <rect key="frame" x="258" y="296" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lb-Qa-wOg">
+                                <rect key="frame" x="141" y="325" width="319" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="MMR-cn-NNt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转换后" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCi-lA-SEp">
+                                <rect key="frame" x="275" y="363" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chp-g4-9LJ">
+                                <rect key="frame" x="141" y="392" width="319" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Lb-Qa-wOg" firstAttribute="top" secondItem="zRZ-8c-k9K" secondAttribute="bottom" constant="8" symbolic="YES" id="0dL-ZR-Lwt"/>
+                            <constraint firstItem="zRZ-8c-k9K" firstAttribute="centerX" secondItem="1Lb-Qa-wOg" secondAttribute="centerX" id="4rY-iG-ent"/>
+                            <constraint firstItem="dbE-Bp-BMp" firstAttribute="centerX" secondItem="PlO-Bk-goj" secondAttribute="centerX" id="6qv-4R-bQP"/>
+                            <constraint firstItem="ZCi-lA-SEp" firstAttribute="top" secondItem="1Lb-Qa-wOg" secondAttribute="bottom" constant="8" symbolic="YES" id="AaJ-vk-eAm"/>
+                            <constraint firstItem="PlO-Bk-goj" firstAttribute="centerX" secondItem="zRZ-8c-k9K" secondAttribute="centerX" id="BW8-pJ-9kF"/>
+                            <constraint firstItem="chp-g4-9LJ" firstAttribute="top" secondItem="ZCi-lA-SEp" secondAttribute="bottom" constant="8" symbolic="YES" id="CXE-3D-KVz"/>
+                            <constraint firstItem="1Lb-Qa-wOg" firstAttribute="leading" secondItem="chp-g4-9LJ" secondAttribute="leading" id="Fg3-Og-59b"/>
+                            <constraint firstAttribute="trailing" secondItem="PlO-Bk-goj" secondAttribute="trailing" id="LiO-5n-dze"/>
+                            <constraint firstItem="1Lb-Qa-wOg" firstAttribute="trailing" secondItem="chp-g4-9LJ" secondAttribute="trailing" id="NzB-TM-Qsz"/>
+                            <constraint firstItem="dbE-Bp-BMp" firstAttribute="top" secondItem="Hdb-Xl-JNi" secondAttribute="bottom" constant="8" symbolic="YES" id="PSv-Na-qUX"/>
+                            <constraint firstItem="PlO-Bk-goj" firstAttribute="top" secondItem="dbE-Bp-BMp" secondAttribute="bottom" constant="8" symbolic="YES" id="YbM-Ye-fJl"/>
+                            <constraint firstItem="1Lb-Qa-wOg" firstAttribute="centerX" secondItem="ZCi-lA-SEp" secondAttribute="centerX" id="lqm-6R-9NI"/>
+                            <constraint firstItem="1Lb-Qa-wOg" firstAttribute="top" secondItem="PlO-Bk-goj" secondAttribute="bottom" constant="8" symbolic="YES" id="pg6-hE-b7X"/>
+                            <constraint firstItem="PlO-Bk-goj" firstAttribute="leading" secondItem="L6T-yS-6QW" secondAttribute="leading" id="yNR-wT-R3s"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryPicker" destination="PlO-Bk-goj" id="cb8-ej-oMH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpu-MF-qno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

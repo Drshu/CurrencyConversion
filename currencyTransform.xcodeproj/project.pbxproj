@@ -20,6 +20,7 @@
 		A2DB646E1CF8780100E0757F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DB646C1CF8780100E0757F /* LaunchScreen.storyboard */; };
 		A2DB64791CF8780200E0757F /* currencyTransformTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB64781CF8780200E0757F /* currencyTransformTests.m */; };
 		A2DB64841CF8780200E0757F /* currencyTransformUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB64831CF8780200E0757F /* currencyTransformUITests.m */; };
+		A2EFA4E61D044BE000EFEA90 /* transformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EFA4E51D044BE000EFEA90 /* transformViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		A2DB647F1CF8780200E0757F /* currencyTransformUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = currencyTransformUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DB64831CF8780200E0757F /* currencyTransformUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = currencyTransformUITests.m; sourceTree = "<group>"; };
 		A2DB64851CF8780200E0757F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2EFA4E41D044BE000EFEA90 /* transformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transformViewController.h; sourceTree = "<group>"; };
+		A2EFA4E51D044BE000EFEA90 /* transformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transformViewController.m; sourceTree = "<group>"; };
 		E5D1B634B14E7890C376270F /* libPods-currencyTransform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-currencyTransform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +135,8 @@
 				A2DB64621CF8780100E0757F /* ViewController.m */,
 				A2B29E2C1CF9D1C5001ED66D /* chosenViewController.h */,
 				A2B29E2D1CF9D1C5001ED66D /* chosenViewController.m */,
+				A2EFA4E41D044BE000EFEA90 /* transformViewController.h */,
+				A2EFA4E51D044BE000EFEA90 /* transformViewController.m */,
 				A20463A81CFD26D900F2643B /* DataFromDataBase.h */,
 				A20463A91CFD26D900F2643B /* DataFromDataBase.m */,
 				A2DB64641CF8780100E0757F /* Main.storyboard */,
@@ -251,6 +256,11 @@
 					A2DB64571CF8780100E0757F = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = CUWL8LY6HS;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					A2DB64731CF8780200E0757F = {
 						CreatedOnToolsVersion = 7.3;
@@ -366,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20463AA1CFD26D900F2643B /* DataFromDataBase.m in Sources */,
+				A2EFA4E61D044BE000EFEA90 /* transformViewController.m in Sources */,
 				A2DB64631CF8780100E0757F /* ViewController.m in Sources */,
 				A2DB64691CF8780100E0757F /* currencyTransform.xcdatamodeld in Sources */,
 				A2DB64601CF8780100E0757F /* AppDelegate.m in Sources */,
@@ -512,6 +523,7 @@
 			baseConfigurationReference = 7C6B2F1DF705D5D28045AFB4 /* Pods-currencyTransform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = currencyTransform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = formal.currencyTransform;
@@ -525,6 +537,7 @@
 			baseConfigurationReference = 4D6408F56A171B2F4D13DD56 /* Pods-currencyTransform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = currencyTransform/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = formal.currencyTransform;
