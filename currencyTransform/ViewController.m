@@ -12,6 +12,8 @@
 #import "DataFromDataBase.h"
 #import "UIScrollView+JElasticPullToRefresh.h"
 #import <MGSwipeTableCell.h>
+#import <AFNetworking.h>
+#import <SBJson/SBJson4.h>
 
 
 static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
@@ -21,6 +23,9 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 @property (nonatomic, strong) NSMutableArray *nameArray;
 @property(nonatomic,strong)NSMutableArray *shortName;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong)NSDictionary *dic;
+@property(nonatomic,strong)NSMutableArray *dataKeyArray;
+@property(nonatomic,strong)NSMutableArray *dataValueArray;
 @end
 
 @implementation ViewController
@@ -48,23 +53,80 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     [self.tableView addJElasticPullToRefreshViewWithActionHandler:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.tableView stopLoading];
-            //第一步，创建URL
-            NSURL *url = [NSURL URLWithString:@"http://www.blublu.top/api/v1/allcurrencies"];
-            //第二步，创建请求
-            NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+//            //第一步，创建URL
+//            NSURL *url = [NSURL URLWithString:@"http://www.blublu.top/api/v1/allcurrencies"];
+//            //第二步，创建请求
+//            NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+//
+//            [request setHTTPMethod:@"GET"];//设置请求方式为POST，默认为GET
+//            NSString *str =[NSString stringWithFormat:@""];//设置参数
+//            NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+//            [request setHTTPBody:data];
+//            //第三步，连接服务器
+//            NSError *error;
+//            NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+//            NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+//
+//            NSDictionary *currencyDic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableContainers error:&error];
+//                        NSLog(@"%@",str1);
+//            for(NSString *key in [currencyDic objectForKey:@"data"]){
+//                NSLog(@"key:%@",key);
+            
+            // 初始化Manager
+            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+            // 不加上这句话，会报“Request failed: unacceptable content-type: text/plain”错误，因为我们要获取text/plain类型数据
+            manager.responseSerializer = [AFJSONResponseSerializer serializer];
+            // Get请求
+            [manager GET:@"http://www.blublu.top/api/v1/allcurrencies" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                // 这里可以获取到目前的数据请求的进度
+            }success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){  // 请求成功，解析数据
+//                NSLog(@"%@", responseObject);
+//                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+                NSLog(@"responseObject:%@",responseObject);
+                //NSString *requestTemp =[NSString stringWithString:responseObject];
+//                NSData *resData = [[NSData alloc]initWithData:[responseObject dataUsingEncoding:NSUTF8StringEncoding]];
+//                SBJson4Parser *parser = [SBJson4Parser parserWithBlock:^(id item, BOOL *stop) {
+//                    NSObject *itemObject = item;
+//                    
+//                    if ([item isKindOfClass:[NSDictionary class]]) {
+//                        NSDictionary *dic = (NSDictionary*)itemObject;
+//                        NSLog(@"%@",[[dic objectForKey:@"data"] allKeys]);
+//                    }
+//                }
+//                                                        allowMultiRoot:NO
+//                                                       unwrapRootArray:NO
+//                                                          errorHandler:^(NSError *error) {
+//                                                              NSLog(@"%@", error);
+//                                                          }];
+//                                            [parser parse:resData];
+                
+                NSMutableArray *dataKeyArray = [[NSMutableArray alloc]init];
+                NSMutableArray *dataValueArray = [[NSMutableArray alloc]init];
+                
+                NSArray *dataArray = [responseObject objectForKey:@"data"];//把字典中的data存为一个数组
+                NSDictionary *dataDic =dataArray[0];//从数组中取出字典
+                NSLog(@"dataDic = %@",dataDic);
+                NSEnumerator *enumerator =[dataDic keyEnumerator];//使用枚举器，开始吧所有的key提取到dataKeyArray
+                for (NSObject *dataKey in enumerator) {
+                    [dataKeyArray addObject:dataKey];
+}
+                NSEnumerator *enumeratorSecond = [dataDic objectEnumerator];
+                for (NSObject *dataValue in enumeratorSecond) {
+                    [dataValueArray addObject:dataValue];
+                }
+                self.dataValueArray=dataValueArray;
+                self.dataKeyArray=dataKeyArray;
+                NSLog(@"dataKeyArray: %@\ndataValueArray:%@",dataKeyArray,dataValueArray);
+                
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                // 请求失败
+                NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+                NSLog(@"%@",errResponse);
+            }];
+            //end of get request
+            
 
-            [request setHTTPMethod:@"GET"];//设置请求方式为POST，默认为GET
-            NSString *str =[NSString stringWithFormat:@""];//设置参数
-            NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-            [request setHTTPBody:data];
-            //第三步，连接服务器
-            NSError *error;
-            NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-            NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
-
-            NSDictionary *currencyDic = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableContainers error:&error];
-                        NSLog(@"%@",str1);
-            //NSDictionary *country
         });
     } LoadingView:loadingViewCircle];
     [self.tableView setJElasticPullToRefreshFillColor:[UIColor colorWithRed:0.0431 green:0.7569 blue:0.9412 alpha:1.0]];

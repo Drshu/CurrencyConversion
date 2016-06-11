@@ -1,20 +1,40 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - JElasticPullToRefresh (1.0.3)
   - MGSwipeTableCell (1.5.5)
+  - SBJson (4.0.2)
 
 DEPENDENCIES:
+  - AFNetworking
   - FMDB
   - JElasticPullToRefresh
   - MGSwipeTableCell
+  - SBJson (~> 4.0.1)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   JElasticPullToRefresh: 63b15bfbb96ea476dce3df9460509d59473b1e94
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  SBJson: c18691cc18375b14664ff0fec841f8c4faef1934
 
-PODFILE CHECKSUM: 9abbc20a2ec85cf3353ed97de1916e8d06d9d16e
+PODFILE CHECKSUM: fa7e290d7843fe4ed3af3098bca89ace7221081e
 
 COCOAPODS: 1.0.0
